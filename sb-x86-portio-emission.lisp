@@ -100,10 +100,7 @@
               (:generator 4
                           ,(unless (= width 32) `(inst xor eax eax))
                           (inst in ,reg port)
-                          (move result eax)))
-            (defun ,setfun (val port) (declare (type (unsigned-byte ,width) val) (type (unsigned-byte 16) port)) (,setfun port val))
-            (defun ,getfun (port) (declare (type (unsigned-byte 16) port)) (,getfun port))
-            (defsetf ,getfun ,setfun)))))
+                          (move result eax)))))))
   (def byte 8 al-tn)
   (def word 16 ax-tn)
   (def dword 32 eax-tn))
