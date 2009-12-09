@@ -1,7 +1,4 @@
-(defpackage :sb-x86-portio.system
-  (:use :cl :asdf))
-
-(in-package :sb-x86-portio.system)
+;;; -*- Mode: Lisp; indent-tabs-mode: nil -*-
 
 (defsystem :sb-x86-portio
   :components ((:file "sb-x86-portio-emission")
